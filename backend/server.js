@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const app = express();
+const axios = require('axios');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
@@ -29,6 +30,23 @@ function addLog(logData) {
         logs.shift();
     }
 }
+
+app.all('/api-proxy/*', async (req, res) => {
+  const target = process.env.VITE_BASE_URL; // ความลับอยู่ใน ENV ของ Vercel
+  const path = req.params[0];
+  
+  try {
+    const response = await axios({
+      method: req.method,
+      url: `${target}/${path}`,
+      data: req.body,
+      headers: { ...req.headers, host: new URL(target).host }
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 // Endpoint สำหรับดึง logs (Polling)
 app.get('/logs', (req, res) => {
