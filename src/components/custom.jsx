@@ -98,7 +98,7 @@ export default function CustomizeModal({ item, onClose }) {
   const [inquiryPayload, setInquiryPayload] = useState(null);
 
   const totalPrice = calcTotal(item, size, extraShot, milk);
-  const isCoffee = item?.category === "กาแฟ";
+  const isCoffee = item?.category === "coffee";
 
   function addLog(msg) {
     const time = new Date().toTimeString().slice(0, 8);

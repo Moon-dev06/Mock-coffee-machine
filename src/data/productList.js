@@ -15,8 +15,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/มอคค่า.jpg",
- "category": "อื่นๆ"
+ "imagePath": "assets/images/Mocha.jpg",
+ "category": "etc"
 },
 {
  "barcode": "2005001480002",
@@ -34,8 +34,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/เอสเพรสโซ่.jpg",
- "category": "กาแฟ"
+ "imagePath": "assets/images/Espresso.jpg",
+ "category": "coffee"
 },
 {
  "barcode": "2005001460004",
@@ -53,8 +53,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/คาปูชิโน่.jpg",
- "category": "กาแฟ"
+ "imagePath": "assets/images/Cappuccino.jpg",
+ "category": "coffee"
 },
 {
  "barcode": "2005000480003",
@@ -72,8 +72,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/ลาเต้.jpg",
- "category": "กาแฟ"
+ "imagePath": "assets/images/Latte.jpg",
+ "category": "coffee"
 },
 {
  "barcode": "2005003120005",
@@ -91,8 +91,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/อเมริกาโน่.jpg",
- "category": "กาแฟ"
+ "imagePath": "assets/images/Americano.jpg",
+ "category": "coffee"
 },
 {
  "barcode": "2005010650007",
@@ -110,8 +110,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 40,
- "imagePath": "assets/images/อเมริกาโน่ น้ำผึ้ง.jpg",
- "category": "กาแฟ"
+ "imagePath": "assets/images/Honey Americano.jpg",
+ "category": "coffee"
 },
 {
  "barcode": "2005003210003",
@@ -129,8 +129,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/มัคคิอาโต.jpg",
- "category": "อื่นๆ"
+ "imagePath": "assets/images/Macchiato.jpg",
+ "category": "etc"
 },
 {
  "barcode": "2005004800005",
@@ -148,8 +148,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/นมชมพู.jpg",
- "category": "อื่นๆ"
+ "imagePath": "assets/images/Pink milk.jpg",
+ "category": "etc"
 },
 {
  "barcode": "2005003050005",
@@ -167,8 +167,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/นมสด.jpg",
- "category": "อื่นๆ"
+ "imagePath": "assets/images/Milk.jpg",
+ "category": "etc"
 },
 {
  "barcode": "2005006150009",
@@ -186,8 +186,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 40,
- "imagePath": "assets/images/ช็อกโกแลต ซิกเนเจอร์.jpg",
- "category": "อื่นๆ"
+ "imagePath": "assets/images/Chocolate Signature.jpg",
+ "category": "etc"
 },
 {
  "barcode": "2005004650006",
@@ -205,8 +205,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/ชานม.jpg",
- "category": "ชา"
+ "imagePath": "assets/images/Milk tea.jpg",
+ "category": "tea"
 },
 {
  "barcode": "2005004640007",
@@ -224,8 +224,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/ชาเขียวนมมัทฉะ.jpg",
- "category": "ชา"
+ "imagePath": "assets/images/Matcha green tea latte.jpg",
+ "category": "tea"
 },
 {
  "barcode": "2005002740006",
@@ -243,8 +243,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/ชามะนาว.jpg",
- "category": "ชา"
+ "imagePath": "assets/images/Lemon tea.jpg",
+ "category": "tea"
 },
 {
  "barcode": "2005011970005",
@@ -262,8 +262,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/ชานมไต้หวัน.jpg",
- "category": "ชา"
+ "imagePath": "assets/images/Taiwan Milk Tea.jpg",
+ "category": "tea"
 },
 {
  "barcode": "2005001470003",
@@ -281,7 +281,7 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/ช็อกโกแลต.jpg",
- "category": "อื่นๆ"
+ "imagePath": "assets/images/Chocolate.jpg",
+ "category": "etc"
 }
 ];
