@@ -6,7 +6,7 @@ class ApiService {
 
     // ── Main API instance ─────────────────────────────────────────────
     this.apiClient = axios.create({
-      baseURL: "/api-proxy",
+      baseURL: import.meta.env.VITE_API_URL,
       // baseURL: import.meta.env.VITE_BASE_URL,
       timeout: 15000,
     });
