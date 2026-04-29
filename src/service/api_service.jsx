@@ -89,8 +89,16 @@ class ApiService {
     try {
       // const baseURL = import.meta.env.VITE_BASE_URL;
       // const apiGetTokenUrl = baseURL+'/v2/payment/gettoken';
-      const res = await this.apiClient.get("/v2/payment/gettoken", {
-        // const res = await apiGetTokenUrl {
+      // const res = await this.apiClient.get("/v2/payment/gettoken", {
+      //   // const res = await apiGetTokenUrl {
+      //   headers: {
+      //     "x-api-key": import.meta.env.VITE_X_API_KEY,
+      //     channel: import.meta.env.VITE_CHANNEL,
+      //   },
+      // });
+      const baseURL = import.meta.env.VITE_BASE_URL;
+
+      const res = await this.apiClient.get(`${baseURL}/v2/payment/gettoken`, {
         headers: {
           "x-api-key": import.meta.env.VITE_X_API_KEY,
           channel: import.meta.env.VITE_CHANNEL,
