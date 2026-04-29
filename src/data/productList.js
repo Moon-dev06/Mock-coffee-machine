@@ -16,7 +16,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Mocha.jpg",
- "category": "etc"
+ "category": "other"
 },
 {
  "barcode": "2005001480002",
@@ -130,7 +130,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Macchiato.jpg",
- "category": "etc"
+ "category": "other"
 },
 {
  "barcode": "2005004800005",
@@ -149,7 +149,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Pink milk.jpg",
- "category": "etc"
+ "category": "other"
 },
 {
  "barcode": "2005003050005",
@@ -168,7 +168,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Milk.jpg",
- "category": "etc"
+ "category": "other"
 },
 {
  "barcode": "2005006150009",
@@ -187,7 +187,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 40,
  "imagePath": "assets/images/Chocolate Signature.jpg",
- "category": "etc"
+ "category": "other"
 },
 {
  "barcode": "2005004650006",
@@ -282,6 +282,6 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Chocolate.jpg",
- "category": "etc"
+ "category": "other"
 }
 ];

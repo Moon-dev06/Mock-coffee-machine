@@ -7,7 +7,7 @@ const MenuScreen = ({ onShowSlip }) => {
   // 1. สถานะสำหรับเลือกหมวดหมู่
   const [activeTab, setActiveTab] = useState('ทั้งหมด');
   const [selectedItem, setSelectedItem] = useState(null); // สถานะสำหรับเก็บสินค้าที่เลือกเพื่อปรับแต่ง
-  const categories = ['ทั้งหมด', 'สินค้าแนะนำ', 'กาแฟ', 'ชา', 'อื่นๆ'];
+  const categories = ['ทั้งหมด', 'สินค้าแนะนำ', 'coffee', 'tea', 'other'];
 
   const menuItems = productList; 
 
