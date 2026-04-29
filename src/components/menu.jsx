@@ -83,7 +83,6 @@ const ProductCard = ({ item, onSelect }) => {
     >
       {/* ส่วนรูปภาพ */}
       <div className="card-image">
-        <img src="" alt="" />
         <img 
           src={`/assets/image/${item.nameimage}.jpg`}
           alt={item.productName}
