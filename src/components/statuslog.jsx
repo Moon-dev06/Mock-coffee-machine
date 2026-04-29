@@ -1,22 +1,17 @@
 import React from 'react';
 import '../style/statuslog.css';
 
-/**
- * StatusDialog — แสดงผลลัพธ์การชำระเงิน (สำเร็จ / ไม่สำเร็จ)
- */
 export default function StatusDialog({ isSuccess, errorMessage, onDone, onRetry }) {
   return (
     <div className="status-overlay">
       <div className="status-dialog">
 
-        {/* ── Header ── */}
         <div className={`status-header ${isSuccess ? 'success' : 'error'}`}>
           <div className="status-icon-circle">
             {isSuccess ? <CheckIcon /> : <CloseIcon />}
           </div>
         </div>
 
-        {/* ── Content ── */}
         <div className="status-content">
           <p className={`status-text ${isSuccess ? 'success' : 'error'}`}>
             {isSuccess ? 'ชำระเงินสำเร็จ' : 'ชำระเงินไม่สำเร็จ'}
@@ -28,7 +23,6 @@ export default function StatusDialog({ isSuccess, errorMessage, onDone, onRetry 
           </p>
         </div>
 
-        {/* ── Button ── */}
         <div className="status-button-section">
           {isSuccess ? (
             <button className="status-btn-outline" onClick={onDone}>
@@ -46,7 +40,6 @@ export default function StatusDialog({ isSuccess, errorMessage, onDone, onRetry 
   );
 }
 
-// ─── Icons ───────────────────────────────────────────────────────────────────
 function CheckIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"

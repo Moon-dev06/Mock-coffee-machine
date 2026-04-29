@@ -16,6 +16,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Mocha.jpg",
+ "nameimage": "Mocha",
  "category": "other"
 },
 {
@@ -35,6 +36,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Espresso.jpg",
+ "nameimage": "Espresso",
  "category": "coffee"
 },
 {
@@ -54,6 +56,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Cappuccino.jpg",
+ "nameimage": "Cappuccino",
  "category": "coffee"
 },
 {
@@ -73,6 +76,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Latte.jpg",
+ "nameimage": "Latte",
  "category": "coffee"
 },
 {
@@ -92,6 +96,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Americano.jpg",
+ "nameimage": "Americano",
  "category": "coffee"
 },
 {
@@ -111,6 +116,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 40,
  "imagePath": "assets/images/Honey Americano.jpg",
+ "nameimage": "Honey Americano",
  "category": "coffee"
 },
 {
@@ -130,6 +136,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Macchiato.jpg",
+ "nameimage": "Macchiato",
  "category": "other"
 },
 {
@@ -149,6 +156,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Pink milk.jpg",
+ "nameimage": "Pink milk",
  "category": "other"
 },
 {
@@ -168,6 +176,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Milk.jpg",
+ "nameimage": "Milk",
  "category": "other"
 },
 {
@@ -187,6 +196,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 40,
  "imagePath": "assets/images/Chocolate Signature.jpg",
+ "nameimage": "Chocolate Signature",
  "category": "other"
 },
 {
@@ -206,6 +216,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Milk tea.jpg",
+ "nameimage": "Milk tea",
  "category": "tea"
 },
 {
@@ -225,6 +236,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Matcha green tea latte.jpg",
+ "nameimage": "Matcha green tea latte",
  "category": "tea"
 },
 {
@@ -244,6 +256,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Lemon tea.jpg",
+ "nameimage": "Lemon tea",
  "category": "tea"
 },
 {
@@ -263,6 +276,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Taiwan Milk Tea.jpg",
+ "nameimage": "Taiwan Milk Tea",
  "category": "tea"
 },
 {
@@ -282,6 +296,7 @@ export const productList = [
  "vatRate": 7,
  "unitprice": 35,
  "imagePath": "assets/images/Chocolate.jpg",
+ "nameimage": "Chocolate",
  "category": "other"
 }
 ];

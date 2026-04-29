@@ -4,14 +4,11 @@ class ApiService {
   constructor() {
     this.accessToken;
 
-    // ── Main API instance ─────────────────────────────────────────────
     this.apiClient = axios.create({
       baseURL: "/api-proxy",
-      // baseURL: import.meta.env.VITE_BASE_URL,
       timeout: 15000,
     });
 
-    // ── Log API instance ──────────────────────────────────────────────
     this.logClient = axios.create({
       baseURL: import.meta.env.VITE_LOG_URL,
       timeout: 5000,
@@ -20,7 +17,6 @@ class ApiService {
     this._setupInterceptors();
   }
 
-  // ─── Interceptors (แทน InterceptorsWrapper ของ Dio) ──────────────────
   _setupInterceptors() {
     // REQUEST interceptor
     this.apiClient.interceptors.request.use((config) => {
@@ -34,7 +30,7 @@ class ApiService {
       config.metadata = { requestId };
 
       console.log(
-        `🚀 [${config.method?.toUpperCase()}] ${config.baseURL}${config.url}`,
+        `[${config.method?.toUpperCase()}] ${config.baseURL}${config.url}`,
       );
       console.log("✅ BASE_URL--CP:", import.meta.env.VITE_BASE_URL);
 
@@ -50,12 +46,10 @@ class ApiService {
       return config;
     });
 
-    // RESPONSE interceptor
     this.apiClient.interceptors.response.use(
       (response) => {
         const requestId = response.config.metadata?.requestId;
 
-        // ยิง log → /logs/response
         this._sendLog("/logs/response", {
           id: requestId,
           url: `${response.config.baseURL}${response.config.url}`,
@@ -68,7 +62,6 @@ class ApiService {
       (error) => {
         const requestId = error.config?.metadata?.requestId;
 
-        // ยิง log → /logs/response (กรณี Error)
         this._sendLog("/logs/response", {
           id: requestId,
           url: error.config
@@ -84,13 +77,9 @@ class ApiService {
     );
   }
 
-  // ─── 🔐 GET TOKEN ─────────────────────────────────────────────────────
   async getToken() {
     try {
-      // const baseURL = import.meta.env.VITE_BASE_URL;
-      // const apiGetTokenUrl = baseURL+'/v2/payment/gettoken';
       const res = await this.apiClient.get("/v2/payment/gettoken", {
-        // const res = await apiGetTokenUrl {
         headers: {
           "x-api-key": import.meta.env.VITE_X_API_KEY,
           channel: import.meta.env.VITE_CHANNEL,
@@ -107,7 +96,6 @@ class ApiService {
     }
   }
 
-  // ─── 🔍 INQUIRY ───────────────────────────────────────────────────────
   async inquiryPayment(amount, storedToken) {
     try {
       const channel = import.meta.env.VITE_CHANNEL;
@@ -139,7 +127,6 @@ class ApiService {
     }
   }
 
-  // ─── 💳 PAYMENT ───────────────────────────────────────────────────────
   async processPayment({
     item,
     totalPrice,
@@ -223,7 +210,6 @@ class ApiService {
     }
   }
 
-  // ─── 🔎 CHECK STATUS ──────────────────────────────────────────────────
   async checkPaymentStatus({ transId, channel, storedToken }) {
     try {
       const channel = import.meta.env.VITE_CHANNEL;
@@ -245,7 +231,6 @@ class ApiService {
     }
   }
 
-  // ─── 📡 SEND LOG (fire-and-forget) ────────────────────────────────────
   _sendLog(path, log) {
     this.logClient.post(path, log).catch((e) => {
       console.warn(`Send Log Error to ${path}:`, e.message);

@@ -1,16 +1,11 @@
 import React from 'react';
 import '../style/slip_page.css';
 
-/**
- * PaymentSlipPage — แสดงสลิปแบบเป๊ะๆ ตาม receiptLines จาก API
- */
 export default function PaymentSlipPage({ receiptLines: payload, onDone }) {
-  // ดึง lines จาก payload.slip[0].receiptLines
   const lines = payload?.slip?.[0]?.receiptLines || [];
 
   return (
     <div className="slip-page">
-      {/* ── AppBar ── */}
       <header className="slip-app-bar">
         <button className="slip-back-btn" onClick={onDone}>
           <ChevronLeft />
@@ -18,8 +13,7 @@ export default function PaymentSlipPage({ receiptLines: payload, onDone }) {
         <span className="slip-app-bar-title">Payment Slip</span>
         <div className="slip-spacer" />
       </header>
-
-      {/* ── Body ── */}
+      
       <div className="slip-body">
         <div className="slip-card">
           <div className="slip-icon-wrapper">

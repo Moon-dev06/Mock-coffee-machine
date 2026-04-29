@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../style/custom.css";
-import StatusDialog from "./statuslog"; // นำเข้า StatusDialog
-import { apiService } from "../service/api_service"; // นำเข้า apiService
+import StatusDialog from "./statuslog";
+import { apiService } from "../service/api_service";
 import dayjs from "dayjs";
 
-// ─── Constants ───────────────────────────────────────────────────────────────
 const MODAL_STATUS = {
   CUSTOMIZATION: "customization",
   PROCESSING: "processing",
@@ -19,7 +18,6 @@ const SUGAR_OPTIONS = ["ไม่มีน้ำตาล", "น้อย", "ป
 const MILK_OPTIONS = ["ไม่มีนม", "นมโอ๊ต (+10฿)", "นมสด"];
 const ICE_OPTIONS = ["ไม่มีน้ำแข็ง", "น้อย", "ปกติ"];
 
-// ─── Helper: calculate price ─────────────────────────────────────────────────
 function calcTotal(item, size, extraShot, milk) {
   const base = Number(item?.unitprice ?? 0);
   return (
@@ -30,7 +28,6 @@ function calcTotal(item, size, extraShot, milk) {
   );
 }
 
-// ─── Sub-components ───────────────────────────────────────────────────────────
 function Dropdown({ label, value, options, onChange }) {
   return (
     <div className="custom-dropdown-row">
@@ -81,7 +78,6 @@ function QRPlaceholder({ qrData, totalPrice }) {
   );
 }
 
-// ─── Main Modal Component ─────────────────────────────────────────────────────
 export default function CustomizeModal({ item, onClose }) {
   const [size, setSize] = useState("M");
   const [sugar, setSugar] = useState("ปกติ");
@@ -91,9 +87,8 @@ export default function CustomizeModal({ item, onClose }) {
   const [status, setStatus] = useState(MODAL_STATUS.CUSTOMIZATION);
   const [logs, setLogs] = useState([]);
   const [qrData, setQrData] = useState("");
-  const [paymentResult, setPaymentResult] = useState(null); // 'success' | 'error' | null
+  const [paymentResult, setPaymentResult] = useState(null);
 
-  // State สำหรับเก็บข้อมูล API
   const [accessToken, setAccessToken] = useState(null);
   const [inquiryPayload, setInquiryPayload] = useState(null);
 
@@ -111,7 +106,7 @@ export default function CustomizeModal({ item, onClose }) {
     try {
       addLog("🔑 Getting Token...");
       const token = await apiService.getToken();
-      console.log("Token from API Service:", token); // ตรวจสอบ token ที่ได้รับ
+      console.log("Token from API Service:", token);
 
       if (!token) throw new Error("Could not get access token");
 
@@ -199,7 +194,6 @@ export default function CustomizeModal({ item, onClose }) {
     setLogs([]);
   }
 
-  // สร้างข้อมูลสลิป
   const getReceiptData = () => {
     const lines = [
       `Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`,
@@ -216,14 +210,13 @@ export default function CustomizeModal({ item, onClose }) {
     return lines;
   };
 
-  // ── หน้าสถานะการชำระเงิน ──
   if (paymentResult) {
     return (
       <StatusDialog
         isSuccess={paymentResult === "success"}
         onDone={() => {
           if (paymentResult === "success") {
-            onClose?.(getReceiptData()); // ส่งข้อมูลสลิปกลับไปตอนปิด
+            onClose?.(getReceiptData());
           } else {
             setPaymentResult(null);
             onClose?.();
