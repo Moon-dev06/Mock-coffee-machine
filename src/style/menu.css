@@ -106,15 +106,15 @@ header {
 
 /* ── Main Grid ── */
 main {
-  padding: 16px 8px 40px; /* ลด padding ด้านข้างเหลือ 8px */
+  padding: 16px 8px 40px;
   width: 100%;
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  width: 100%; /* ให้กว้างเต็ม 100% */
+  gap: clamp(8px, 2vw, 16px); /* gap ยืดหยุ่นตามหน้าจอ */
+  width: 100%;
 }
 
 @media (min-width: 600px) {
@@ -140,6 +140,7 @@ main {
   display: flex;
   flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  width: 100%; /* ให้ card กว้างเต็ม column */
 }
 
 .product-card:hover {
@@ -153,12 +154,10 @@ main {
   box-shadow: var(--shadow-sm);
 }
 
-/* Image area */
+/* Image area — ใช้ aspect-ratio แทน height คงที่ */
 .card-image {
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* สัดส่วนรูปคงที่ทุกขนาด */
   position: relative;
   background-color: color-mix(in srgb, var(--green) 22%, var(--white));
   overflow: hidden;
@@ -167,7 +166,9 @@ main {
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;       /* รูปเต็มกรอบ ไม่บิดเบี้ยว */
+  object-position: center; /* จัดกึ่งกลาง */
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -176,13 +177,17 @@ main {
 }
 
 .card-image .fallback-icon {
-  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(28px, 5vw, 40px); /* ขนาด icon ยืดหยุ่น */
   opacity: 0.5;
 }
 
 /* Info area */
 .card-info {
-  padding: 12px 14px 14px;
+  padding: clamp(8px, 2vw, 14px); /* padding ยืดหยุ่น */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -190,7 +195,7 @@ main {
 }
 
 .card-name {
-  font-size: 14px;
+  font-size: clamp(12px, 1.8vw, 15px); /* ขนาดตัวอักษรยืดหยุ่น */
   font-weight: 600;
   color: var(--gray-700);
   white-space: nowrap;
@@ -199,15 +204,8 @@ main {
   letter-spacing: 0.01em;
 }
 
-.card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2px;
-}
-
 .card-price {
-  font-size: 13px;
+  font-size: clamp(11px, 1.6vw, 14px); /* ขนาดราคายืดหยุ่น */
   font-weight: 700;
   color: var(--brown-mid);
   letter-spacing: 0.02em;

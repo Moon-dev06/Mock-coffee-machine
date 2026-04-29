@@ -14,7 +14,14 @@ const MenuScreen = ({ onShowSlip }) => {
   // 2. ฟังก์ชันกรองสินค้า
   const filteredItems = activeTab === 'ทั้งหมด' || activeTab === 'สินค้าแนะนำ'
     ? menuItems
-    : menuItems.filter(item => item.category === activeTab);
+    : menuItems.filter(item => {
+        const categoryMap = {
+          'กาแฟ': 'coffee',
+          'ชา': 'tea',
+          'อื่นๆ': 'other'
+        };
+        return item.category === categoryMap[activeTab];
+      });
 
   return (
     <div className="menu-container">
@@ -24,7 +31,6 @@ const MenuScreen = ({ onShowSlip }) => {
           Mock Coffee Machine
         </div>
         
-        {/* TabBar Section */}
         <div className="tab-bar">
           {categories.map((cat) => (
             <button
@@ -38,7 +44,6 @@ const MenuScreen = ({ onShowSlip }) => {
         </div>
       </header>
 
-      {/* Body Section (GridView) */}
       <main>
         {filteredItems.length === 0 ? (
           <div className="empty-state">
