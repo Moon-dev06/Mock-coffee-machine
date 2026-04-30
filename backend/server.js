@@ -262,9 +262,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = app;
 
-
-//กัน App ตายจาก Error นอก Express (เช่น Promise ที่ไม่ได้ catch)
-// 🛠 Global Express Error Handler (ควรอยู่ท้ายสุดของ routes)
 app.use((err, req, res, next) => {
     console.error('Express Error:', err.stack);
 
