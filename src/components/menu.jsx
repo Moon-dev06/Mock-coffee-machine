@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { productList } from '../data/productList';
 import CustomizeModal from './custom'; // นำเข้า Modal
 import '../style/menu.css';
+import.meta.glob;
 
 const MenuScreen = ({ onShowSlip }) => {
   // 1. สถานะสำหรับเลือกหมวดหมู่
@@ -79,6 +80,11 @@ const MenuScreen = ({ onShowSlip }) => {
   );
 };
 
+const images = import.meta.glob('../assets/image/*.jpg', { eager: true });
+
+const getImage = (name) => {
+  return images[`../assets/image/${name}.jpg`]?.default;
+};
 // 3. Sub-component สำหรับ Card สินค้า
 const ProductCard = ({ item, onSelect }) => {
   return (
@@ -88,14 +94,7 @@ const ProductCard = ({ item, onSelect }) => {
     >
       {/* ส่วนรูปภาพ */}
       <div className="card-image">
-        <img 
-          src={`/assets/image/${item.nameimage}.jpg`}
-          alt={item.productName}
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'block';
-          }}
-        />
+        <img src={getImage(item.nameimage)} />
         {/* Icon สำรองเมื่อโหลดรูปไม่ได้ */}
         <div className="fallback-icon" style={{ display: 'none' }}>☕</div>
       </div>
