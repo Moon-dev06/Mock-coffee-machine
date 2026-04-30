@@ -5,8 +5,11 @@ const path = require('path');
 const app = express();
 const axios = require('axios');
 
+// app.use(cors());
+app.use(cors({
+  origin: '*' // หรือใส่ domain จริง
+}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
 app.use(express.json());
 
 let logs = [];
