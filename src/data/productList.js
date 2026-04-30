@@ -15,8 +15,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Mocha.jpg",
- "nameimage": "Mocha",
+ "imagePath": "assets/image/mocha.jpg",
+ "nameimage": "mocha",
  "category": "other"
 },
 {
@@ -35,8 +35,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Espresso.jpg",
- "nameimage": "Espresso",
+ "imagePath": "assets/image/espresso.jpg",
+ "nameimage": "espresso",
  "category": "coffee"
 },
 {
@@ -55,8 +55,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Cappuccino.jpg",
- "nameimage": "Cappuccino",
+ "imagePath": "assets/image/cappuccino.jpg",
+ "nameimage": "cappuccino",
  "category": "coffee"
 },
 {
@@ -75,8 +75,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Latte.jpg",
- "nameimage": "Latte",
+ "imagePath": "assets/image/latte.jpg",
+ "nameimage": "latte",
  "category": "coffee"
 },
 {
@@ -95,8 +95,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Americano.jpg",
- "nameimage": "Americano",
+ "imagePath": "assets/image/americano.jpg",
+ "nameimage": "americano",
  "category": "coffee"
 },
 {
@@ -115,8 +115,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 40,
- "imagePath": "assets/images/Honey Americano.jpg",
- "nameimage": "Honey Americano",
+ "imagePath": "assets/image/honey-americano.jpg",
+ "nameimage": "honey-americano",
  "category": "coffee"
 },
 {
@@ -135,8 +135,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Macchiato.jpg",
- "nameimage": "Macchiato",
+ "imagePath": "assets/image/macchiato.jpg",
+ "nameimage": "macchiato",
  "category": "other"
 },
 {
@@ -155,8 +155,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Pink milk.jpg",
- "nameimage": "Pink milk",
+ "imagePath": "assets/image/pink-milk.jpg",
+ "nameimage": "pink-milk",
  "category": "other"
 },
 {
@@ -175,8 +175,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Milk.jpg",
- "nameimage": "Milk",
+ "imagePath": "assets/image/milk.jpg",
+ "nameimage": "milk",
  "category": "other"
 },
 {
@@ -195,8 +195,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 40,
- "imagePath": "assets/images/Chocolate Signature.jpg",
- "nameimage": "Chocolate Signature",
+ "imagePath": "assets/image/chocolate-signature.jpg",
+ "nameimage": "chocolate-signature",
  "category": "other"
 },
 {
@@ -215,8 +215,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Milk tea.jpg",
- "nameimage": "Milk tea",
+ "imagePath": "assets/image/milk-tea.jpg",
+ "nameimage": "milk-tea",
  "category": "tea"
 },
 {
@@ -235,8 +235,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Matcha green tea latte.jpg",
- "nameimage": "Matcha green tea latte",
+ "imagePath": "assets/image/matcha-green-tea-latte.jpg",
+ "nameimage": "matcha-green-tea-latte",
  "category": "tea"
 },
 {
@@ -255,8 +255,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Lemon tea.jpg",
- "nameimage": "Lemon tea",
+ "imagePath": "assets/image/lemon-tea.jpg",
+ "nameimage": "lemon-tea",
  "category": "tea"
 },
 {
@@ -275,8 +275,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Taiwan Milk Tea.jpg",
- "nameimage": "Taiwan Milk Tea",
+ "imagePath": "assets/image/taiwan-milk-tea.jpg",
+ "nameimage": "taiwan-milk-tea",
  "category": "tea"
 },
 {
@@ -295,8 +295,8 @@ export const productList = [
  "subcatPma": "02",
  "vatRate": 7,
  "unitprice": 35,
- "imagePath": "assets/images/Chocolate.jpg",
- "nameimage": "Chocolate",
+ "imagePath": "assets/image/chocolate.jpg",
+ "nameimage": "chocolate",
  "category": "other"
 }
 ];
